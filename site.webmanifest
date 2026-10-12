@@ -1,0 +1,14 @@
+{
+  "name": "Valyria",
+  "short_name": "Valyria",
+  "description": "Concentrate settlement software for copper and zinc–lead producers.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#FFFDF3",
+  "theme_color": "#FFE500",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

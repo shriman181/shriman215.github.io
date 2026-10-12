@@ -1,0 +1,17 @@
+/* TEAM */
+Founder & CEO: Shriman Maheshwari
+Contact: ceo [at] valyria.space
+LinkedIn: https://www.linkedin.com/in/shriman-maheshwari/
+From: Mumbai and Goa, India
+
+/* HIRING */
+Co-founder, commercial: concentrate marketing or trade operations (Lima, Santiago or remote)
+Founding engineer, document AI: Python and TypeScript (Mumbai or remote)
+Write to ceo [at] valyria.space
+
+/* SITE */
+Last update: 2026/10/13
+Language: English
+Standards: HTML5, CSS3, vanilla JavaScript
+Fonts: Bricolage Grotesque, Outfit
+Hosting: GitHub Pages

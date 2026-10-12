@@ -1,0 +1,37 @@
+# Valyria
+
+> Valyria is software that checks every mineral-concentrate sale against its contract, lot by lot. It compiles offtake contracts into executable settlement terms, reads weight, moisture and assay certificates, computes what each provisional and final invoice should say, runs assay-exchange and umpire deadlines, and drafts letters for a named person to sign. It starts with mid-tier copper and zinc–lead producers selling to traders and smelters in Peru, Chile and Mexico.
+
+Website: https://valyria.space/
+Contact: ceo@valyria.space
+Founder & CEO: Shriman Maheshwari (https://www.linkedin.com/in/shriman-maheshwari/)
+Founded: 2026
+
+## Product
+
+- Terms Compiler: reads frame contracts, annual addenda and side letters; compiles payables, TC/RCs (fixed, index-linked or floored), penalties, pricing periods and splitting limits into terms that link to their clauses.
+- Lot File: collects bills of lading and weight, moisture, sampling and assay certificates; reads English, Spanish and Chinese documents; flags what is missing.
+- Shadow Settlement: computes provisional and final invoices line by line with deterministic code; AI reads documents but does not do the arithmetic.
+- Clocks: assay exchange, pricing-period declarations, umpire nomination, sample retention and payment dates.
+- Drafts: exchange letters, umpire nominations, invoice queries and period declarations. A named person signs and sends; Valyria never sends on its own.
+- Ledger: assay gaps, umpire outcomes and laboratory bias by counterparty; realised value against contract.
+- Editions: Seller (first), Buyer for traders and smelters (next), Royalty (exploratory).
+
+## Pricing (US dollars)
+
+- Settlement Review: fixed fee of $30,000–$60,000 for the last 12 months of lots, credited in full against the first year.
+- Mine: $60,000 a year, up to 150,000 dry metric tonnes under management.
+- Portfolio: $150,000 a year, 150,000–600,000 dmt.
+- Enterprise: from $300,000 a year, over 600,000 dmt or for traders and smelters.
+
+## What Valyria is not
+
+Valyria is not a trader, a marketplace, a trading system or a law firm. It takes no position in any deal and gives no legal or trading advice.
+
+## Key pages
+
+- [The problem](https://valyria.space/#problem): how a concentrate lot is paid and where money leaks.
+- [Product](https://valyria.space/#product): the six layers.
+- [Pricing](https://valyria.space/#pricing)
+- [About](https://valyria.space/#about) and [Founder](https://valyria.space/#founder)
+- Book a Settlement Review: ceo@valyria.space
