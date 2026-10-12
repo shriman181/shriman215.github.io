@@ -1,4 +1,4 @@
-  Contact: mailto:ceo@valyria.space
-  Expires: 2027-10-13T00:00:00.000Z
-  Preferred-Languages: en, es
-  Canonical: https://valyria.space/.well-known/security.txt
+Contact: mailto:ceo@valyria.space
+Expires: 2027-10-13T00:00:00.000Z
+Preferred-Languages: en, es
+Canonical: https://valyria.space/.well-known/security.txt
