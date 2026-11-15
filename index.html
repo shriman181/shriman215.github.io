@@ -423,12 +423,33 @@ p{margin:0}
 .legal{margin-top:34px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:14px;color:var(--ink-2);font-weight:400}
 
 /* ---------- responsive ---------- */
+/* ---------- settlement review request form ---------- */
+.request{padding:104px 0 112px}
+.req-card{max-width:1140px;margin:0 auto;background:var(--white);border:var(--line) solid var(--ink);border-radius:22px;box-shadow:12px 12px 0 var(--ink);padding:52px 48px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px 56px;align-items:start}
+.req-card .title{font-size:clamp(32px,3.6vw,52px)}
+.req-intro p{margin:18px 0 0;font-size:17px;line-height:1.85;font-weight:400;color:var(--ink-2)}
+.req-intro a{color:var(--ink);font-weight:600}
+.req-form{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px 22px}
+.req-form .full{grid-column:1/-1}
+.req-form label{display:flex;flex-direction:column;gap:8px;font:600 15px/1.3 var(--body)}
+.req-form label small{font-weight:400;color:var(--ink-2)}
+.req-form input,.req-form textarea{width:100%;font:400 17px/1.45 var(--body);color:var(--ink);background:var(--paper);border:var(--line) solid var(--ink);border-radius:12px;padding:13px 16px;box-shadow:4px 4px 0 var(--ink)}
+.req-form textarea{min-height:128px;resize:vertical}
+.req-form input:focus-visible,.req-form textarea:focus-visible{outline:3px solid var(--pink);outline-offset:3px;background:var(--white)}
+.req-form [aria-invalid="true"]{box-shadow:4px 4px 0 var(--pink);background:#FFF0F5}
+.req-form .btn{justify-self:start}
+.req-form .btn[disabled]{opacity:.6;cursor:progress;transform:none;box-shadow:6px 6px 0 var(--ink)}
+.req-status{margin:0;min-height:1.5em;font-size:16px;line-height:1.5;font-weight:500}
+.req-status.ok{background:var(--mint);border:var(--line) solid var(--ink);padding:12px 16px;box-shadow:4px 4px 0 var(--ink)}
+.hp{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+
 @media (max-width:1120px){
   .hero-grid{grid-template-columns:1fr;gap:64px}
   .hero .lede,.hero-rule,.hero .src{max-width:none}
   .layers{grid-template-columns:repeat(2,minmax(0,1fr))}
   .plans{grid-template-columns:1fr;max-width:620px;margin-left:auto;margin-right:auto;gap:52px}
   .review{grid-template-columns:1fr;max-width:620px;margin-left:auto;margin-right:auto}
+  .req-card{grid-template-columns:1fr;max-width:620px}
   .about-grid,.founder-grid{grid-template-columns:1fr}
   .nav-links{gap:22px}
 }
@@ -449,6 +470,9 @@ p{margin:0}
   .role{flex-direction:column;align-items:flex-start;gap:10px}
   .f-side{padding:32px 24px}
   .review{padding:46px 24px 32px}
+  .req-card{padding:40px 24px 32px;box-shadow:8px 8px 0 var(--ink)}
+  .req-form{grid-template-columns:minmax(0,1fr)}
+  .request{padding:84px 0 96px}
   .plan{padding:48px 24px 28px}
   .sources ol{columns:1}
   .foot-grid{grid-template-columns:1fr 1fr}
@@ -507,7 +531,7 @@ p{margin:0}
       <h1 id="hero-title">Check the <span class="accent">assay</span>.<br>Keep the copper.</h1>
       <p class="lede"><b>Valyria</b> checks every concentrate sale against its contract, lot by lot. It reads each weight, moisture and assay certificate, works out what every provisional and final invoice should say, runs the assay-exchange and umpire deadlines, and drafts the letters your commercial manager signs.</p>
       <div class="hero-ctas">
-        <a class="btn btn-yellow" href="mailto:ceo@valyria.space?subject=Settlement%20Review">Book a Settlement Review
+        <a class="btn btn-yellow" href="#request">Book a Settlement Review
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0B0B0B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
         <a class="btn" href="#product">See how it works</a>
       </div>
@@ -714,13 +738,48 @@ p{margin:0}
         <li><span class="box"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B0B0B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg></span>Bias report for each laboratory and counterparty</li>
         <li><span class="box"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B0B0B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg></span>Your contracts compiled and ready to go live</li>
       </ul>
-      <a class="btn btn-yellow" href="mailto:ceo@valyria.space?subject=Settlement%20Review">Book a Settlement Review
+      <a class="btn btn-yellow" href="#request">Book a Settlement Review
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0B0B0B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
     </article>
 
     <div class="price-notes">
       <p><b>Why the price holds.</b> On the illustrative 10,000 dmt parcel above, one 0.25-point assay gap is worth about $331,000. The Mine plan costs about 18% of that single gap.</p>
       <p><b>The small print.</b> Prices are in US dollars, before taxes, and banded by dry metric tonnes (dmt) of concentrate under management a year. Plans are fixed subscriptions; we take no share of the money a settlement recovers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4b. SETTLEMENT REVIEW REQUEST ================= -->
+<section class="request" id="request" aria-labelledby="request-title">
+  <div class="wrap">
+    <div class="req-card">
+      <div class="req-intro">
+        <span class="eyebrow">Settlement Review</span>
+        <h2 class="title" id="request-title" style="margin-top:18px">Book a Settlement Review</h2>
+        <p>Tell us a little about your concentrate sales and we'll reply from ceo@valyria.space to set up the review.</p>
+        <p>Prefer email? Write to <a href="mailto:ceo@valyria.space?subject=Settlement%20Review">ceo@valyria.space</a>.</p>
+      </div>
+
+      <form class="req-form" id="demo-form">
+        <label>Name
+          <input name="name" autocomplete="name" maxlength="120" required></label>
+        <label>Work email
+          <input name="email" type="email" autocomplete="email" maxlength="254" required></label>
+        <label>Company
+          <input name="company" autocomplete="organization" maxlength="160" required></label>
+        <label><span>Role <small>(optional)</small></span>
+          <input name="role" autocomplete="organization-title" maxlength="120"></label>
+        <label class="full"><span>Which concentrates do you sell, and roughly how many lots a year? <small>(optional)</small></span>
+          <textarea name="message" rows="4" maxlength="2000"></textarea></label>
+
+        <div class="hp" aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div>
+
+        <div class="full cf-turnstile" data-sitekey="0x4AAAAAAGCk7WyWO33NoU68" data-theme="light" data-size="flexible"></div>
+
+        <button class="btn btn-yellow full" type="submit">Send request
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0B0B0B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+        <p class="req-status full" id="demo-status" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </div>
 </section>
@@ -892,6 +951,58 @@ p{margin:0}
   }
 
   var y = document.getElementById("year"); if (y) y.textContent = new Date().getFullYear();
+})();
+</script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script>
+(function(){
+  "use strict";
+  /* Settlement Review form: posts to the valyria-demo Cloudflare Worker. */
+  var ENDPOINT = "https://valyria-demo.valyria.workers.dev/api/demo";
+  var form = document.getElementById("demo-form");
+  if (!form) return;
+  var status = document.getElementById("demo-status");
+  var button = form.querySelector("button[type=submit]");
+  var fallback = "Something went wrong. Please email ceo@valyria.space.";
+  var messages = {
+    invalid_fields: "Please check the highlighted fields.",
+    rate_limited: "Too many attempts. Please wait a minute and try again.",
+    turnstile_rejected: "The security check failed. Please try again.",
+    turnstile_wrong_hostname: "The security check failed. Please reload the page and try again.",
+    turnstile_unavailable: "The security check is unavailable right now. Please try again shortly."
+  };
+  function say(text, ok){ status.textContent = text; status.className = "req-status full" + (ok ? " ok" : ""); }
+
+  form.addEventListener("submit", function(event){
+    event.preventDefault();
+    Array.prototype.forEach.call(form.querySelectorAll("[aria-invalid]"), function(el){ el.removeAttribute("aria-invalid"); });
+
+    var data = {};
+    new FormData(form).forEach(function(value, key){ data[key] = value; });
+    data.turnstileToken = data["cf-turnstile-response"] || "";
+    delete data["cf-turnstile-response"];
+    if (!data.turnstileToken) { say("Please complete the security check above the button."); return; }
+
+    button.disabled = true;
+    say("Sending...");
+    fetch(ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) })
+      .then(function(res){ return res.json().catch(function(){ return {}; }).then(function(body){ return { ok: res.ok, body: body }; }); })
+      .then(function(r){
+        if (r.ok && r.body.ok) {
+          form.reset();
+          say("Thank you. Your request is in, and we'll reply from ceo@valyria.space.", true);
+        } else {
+          (r.body.fields || []).forEach(function(name){ var el = form.elements[name]; if (el && el.setAttribute) el.setAttribute("aria-invalid", "true"); });
+          say(messages[r.body.error] || fallback);
+        }
+      })
+      .catch(function(){ say("Couldn't send. Please email ceo@valyria.space."); })
+      .then(function(){
+        button.disabled = false;
+        /* A Turnstile token works once, so fetch a fresh one for the next attempt. */
+        if (window.turnstile) window.turnstile.reset();
+      });
+  });
 })();
 </script>
 </body>
